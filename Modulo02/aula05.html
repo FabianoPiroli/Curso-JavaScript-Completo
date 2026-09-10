@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <script>
+        // Funções
+
+        function testes() {
+            //Executado quando chama a função
+            console.log("Função testes chamada");
+        }
+
+        function testes2(nome, idade) {
+            console.log("Nome passado é: " + nome);
+            console.log("Idade passada é: " + idade);
+            console.log("-------------------------------");
+        }
+
+        testes(); // Chama a função testes
+        testes2("Fabiano", 28); // Chama a função testes2 passando os parâmetros nome e idade
+        testes2("João", 30); // Chama a função testes2 passando os parâmetros nome e idade
+
+        function pegarNome() {
+            return "Fabiano";
+
+            console.log("testes") // nunca será executado, pois o return encerra a função
+        }
+
+        var nome = pegarNome(); // Chama a função pegarNome e armazena o valor retornado na variável nome
+        // Mesma coisa que fazer: var nome = "Fabiano";
+        console.log("O nome retornado pela função pegarNome é: " + nome);
+
+        function pegarNome(param) {
+            if(param == 1) {
+                return "Fabiano";
+            } else if(param == 2) {
+                return "João";
+            } else {
+                return "Nome não encontrado";
+            }
+        }
+
+        var nome = pegarNome(1); // Chama a função pegarNome passando o parâmetro 1 e armazena o valor retornado na variável nome
+        console.log("O nome retornado pela função pegarNome(param) é: " + nome);
+        </script>
+    </body>
+</html>
